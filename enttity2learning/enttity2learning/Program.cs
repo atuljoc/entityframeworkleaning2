@@ -11,8 +11,8 @@ namespace enttity2learning
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<Adddbcontext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString())
-            })
+                options.UseSqlServer(builder.Configuration.GetConnectionString("appdata"));
+            });
 
             // Add services to the container.
 

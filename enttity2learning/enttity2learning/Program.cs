@@ -1,4 +1,7 @@
 
+using enttity2learning.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace enttity2learning
 {
     public class Program
@@ -6,6 +9,10 @@ namespace enttity2learning
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<Adddbcontext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString())
+            })
 
             // Add services to the container.
 

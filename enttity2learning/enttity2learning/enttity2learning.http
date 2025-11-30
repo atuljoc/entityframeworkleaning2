@@ -1,0 +1,6 @@
+@enttity2learning_HostAddress = http://localhost:5037
+
+GET {{enttity2learning_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
